@@ -12,6 +12,7 @@ public class NintendoState implements State {
 	public void pressHomeButton() {
 		// TODO Auto-generated method stub
 		System.out.println("Displaying Homescreen...");
+		gameConsole.setState(gameConsole.getHomeState());
 
 	}
 
@@ -26,6 +27,7 @@ public class NintendoState implements State {
 	public void pressXBoxButton() {
 		// TODO Auto-generated method stub
 		System.out.println("Starting XBox...");
+		gameConsole.setState(gameConsole.getXBoxState());
 	}
 
 	@Override
@@ -34,13 +36,15 @@ public class NintendoState implements State {
 		System.out.println("You have the following games:");
 		String gameList = "";
 		for (int i = 0; i < nintendoGames.length; i++) {
-			if (i < nintendoGames.length - 1 ) {
-			gameList+= nintendoGames[i] +", ";
+			if (i < nintendoGames.length - 1) {
+				gameList += nintendoGames[i] + ", ";
 			} else {
-				gameList+= nintendoGames[i];
+				gameList += nintendoGames[i];
 			}
 		}
-
+		
+		System.out.println(gameList);
+		System.out.println();
 	}
 
 }
