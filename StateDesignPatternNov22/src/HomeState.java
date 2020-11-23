@@ -16,6 +16,7 @@ public class HomeState implements State {
 	@Override
 	public void pressNintendoButton() {
 		System.out.println("Starting Nintendo...");
+		gameConsole.setState(gameConsole.getNintendoState());
 
 	}
 
@@ -23,6 +24,7 @@ public class HomeState implements State {
 	public void pressXBoxButton() {
 		// TODO Auto-generated method stub
 		System.out.println("Starting XBox...");
+		gameConsole.setState(gameConsole.getXBoxState());
 
 	}
 
